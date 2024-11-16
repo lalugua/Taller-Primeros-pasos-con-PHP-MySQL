@@ -18,7 +18,7 @@ session_start();
             $this->dbn = new PDO($dsn, $user, $password);
             $this->dbn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            echo "La conexión fue exitosa";
+           
 
         } catch (PDOException $e) {
             echo "Error de conexión: " . $e->getMessage();
@@ -40,7 +40,7 @@ session_start();
         }
     }
 
-    public function ruta() {
+    static function ruta() {
         return "http://localhost/pagina/";
     }
 }

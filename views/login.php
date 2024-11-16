@@ -3,7 +3,6 @@
 require_once("../config/conexion.php");
 
 if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
-    echo 'prueba';
     require_once("../models/Usuario.php");
     /*TODO: Inicializando Clase */
     $usuario = new Usuario();
@@ -34,7 +33,7 @@ if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
 
       <form action="" method="post">
         <div class="input-group mb-3">
-          <input type="email" name="email" class="form-control" placeholder="Email">
+          <input type="email" name="email1" class="form-control" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
