@@ -1,3 +1,18 @@
+<?php
+/*TODO: Llamando Cadena de Conexion */
+require_once("../config/conexion.php");
+
+if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
+    echo 'prueba';
+    require_once("../models/Usuario.php");
+    /*TODO: Inicializando Clase */
+    $usuario = new Usuario();
+    $usuario->login();
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +32,9 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in para iniciar tu sesion</p>
 
-      <form action="../../index3.html" method="post">
+      <form action="" method="post">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" name="email" class="form-control" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -27,7 +42,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" name="password" class="form-control" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -38,11 +53,33 @@
 
           <!-- /.col -->
           <div class="col-12">
+            <input type="hidden"enviar name="enviar" value="si">
             <button type="submit" class="btn btn-primary btn-block">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
+
+      <?php
+        if(isset($_GET["m"])){
+            switch($_GET["m"]){
+                case "1";
+                ?>
+                <div class="alert alert-danger" role="alert">
+                    Los datos ingresados son incorrectos!
+                </div>
+                <?php
+                break;
+                case "2";
+                ?>
+                <div class="alert alert-warning" role="alert">
+                    El formulario tiene los campos vacíos!
+                </div>
+                <?php
+                break;
+            }
+        }
+        ?>
 
    
       <!-- /.social-auth-links -->
