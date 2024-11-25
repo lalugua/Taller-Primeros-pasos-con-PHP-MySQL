@@ -134,6 +134,19 @@
             </div>
         </div>
     </section>
+    <section class="timeline" id="experiencia">
+        <h2>Experiencia</h2>
+        <div class="timeline-container">
+           
+        </div>
+    </section>
+    <section class="timeline" id="estudios">
+        <h2>Estudios</h2>
+        <div class="timeline-container">
+            
+        </div>
+    </section>
+
     <section id="contactus">
         <p class="titulo">CONTACTENOS</p>
         <form action="">
@@ -194,5 +207,7 @@
             <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
         </div>
     </footer>
+
+    <script src="./public/js/main.js"></script>
 </body>
 </html> 

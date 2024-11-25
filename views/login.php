@@ -55,6 +55,11 @@ if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
             <input type="hidden"enviar name="enviar" value="si">
             <button type="submit" class="btn btn-primary btn-block">Sign In</button>
           </div>
+
+          <div class="col-12 mt-2">
+            <input type="hidden"enviar name="enviar" value="si">
+            <a href="/Pagina/views/recuperar_contrasenia.php" class="btn btn-warning btn-block">Recuperar Contraseña</a>
+          </div>
           <!-- /.col -->
         </div>
       </form>

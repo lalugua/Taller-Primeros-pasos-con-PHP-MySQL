@@ -450,3 +450,86 @@ header .icons  #menubars{
         background:var(--texto);
     }
 }
+
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Section headers */
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Timeline styles */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.timeline-item {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+    width: 90%;
+    left: 10%;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    top: 20px;
+    left: -4px;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.timeline-content h4 {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.timeline-content p {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 100%;
+        left: 0;
+    }
+}
